@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="highscore">
+        <h1>HIGHSCORE</h1>
+        <div class="rank"></div>
+      </div>
+      <div class="canvas">
+        <canvas id="board"></canvas>
+      </div>
+      <div class="description">
+        <h1>Tetris.</h1>
+        <div class="info">
+          <p>SCORE : <span id="score"> 0</span></p>
+          <p>LEVEL : <span id="level"> 0</span></p>
+        </div>
+        <div class="next">
+          <p>NEXT</p>
+          <canvas width="120" height="120" id="next"></canvas>
+          <div class="play">
+            <button onclick="play()" id="btn">PLAY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <h1>조작법</h1>
+      <ul>
+        <li>↑ : Rotate</li>
+        <li>↓ : Drop</li>
+        <li>← : Left</li>
+        <li>→ : Right</li>
+        <li>Space : Hard Drop</li>
+      </ul>
+    </footer>
+    <script src="constant.js"></script>
+    <script src="board.js"></script>
+    <script src="tetromino.js"></script>
+    <script src="control.js"></script>
+  </body>
+</html>
