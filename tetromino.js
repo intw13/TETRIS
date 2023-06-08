@@ -127,6 +127,9 @@ function placeTetromino() {
         // 5번 지워질 때마다 level.textContent 값을 1씩 증가시킴
         let currentLevel = parseInt(level.textContent);
         level.textContent = currentLevel + 1;
+        
+        addpoint = parseInt(point);
+        point = addpoint + 50; // 레벨 증가할때마다 50점 추가
 
         speed -= 5; // 속도 5씩 증가
         if (speed <= 10) {
