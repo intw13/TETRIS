@@ -21,5 +21,7 @@ let linesCleared = 0;
 let countScore = 0;
 let speed = 40;
 
+let point = 100;
+
 const nextCanvas = document.getElementById('next');
 const nextCtx = nextCanvas.getContext('2d');
