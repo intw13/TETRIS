@@ -135,7 +135,6 @@ function placeTetromino() {
           speed = 10;
         }
       }
-      }
     } else {
       row--; // 줄 지우기
     }
