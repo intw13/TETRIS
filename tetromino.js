@@ -124,22 +124,17 @@ function placeTetromino() {
         score.textContent = currentScore + point;
         // 라인지울때 포인트 증가
       }
-      if (linesCleared % 5 === 0) {
+      if (linesCleared % 2 === 0) {
         // 라인 5번 지울때 레벨업
-        levelUp++;
-      }
-      if (levelUp) {
         let currentLevel = parseInt(level.textContent);
         level.textContent = currentLevel + 1;
-        addpoint = parseInt(point);
-        point = addpoint + 50; // 레벨 증가할때마다 50점 추가
-      }
-      if (levelUp % 2 === 0) {
-        // 레벨 2 증가할때마다 속도 증가
-        speed -= 5;
+        point += 50;
+
+        speed -= 2.5;
         if (speed <= 10) {
           speed = 10;
         }
+      }
       }
     } else {
       row--; // 줄 지우기
