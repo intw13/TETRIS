@@ -37,13 +37,13 @@ const tetrominos = {
 };
 
 const colors = {
-  I: 'cyan',
-  O: 'yellow',
-  T: 'purple',
-  S: 'green',
-  Z: 'red',
-  J: 'blue',
-  L: 'orange',
+  I: '#31f2fc', // cyan
+  O: '#FFEF00', // yellow
+  T: '#c300c3', // purple
+  S: '#00c300', // green
+  Z: '#f40000', // red
+  J: '#0000f4', // blue
+  L: '#ffc357', // orange
 };
 
 function generateSequence() {
