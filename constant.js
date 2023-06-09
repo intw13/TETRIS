@@ -18,7 +18,6 @@ let count = 0;
 let rAF = null;
 let gameOver = false;
 let linesCleared = 0;
-let levelUp = 0;
 let countScore = 0;
 let speed = 40;
 
