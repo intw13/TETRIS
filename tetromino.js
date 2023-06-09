@@ -107,7 +107,7 @@ function placeTetromino() {
       }
     }
   }
-  for (let row = playfield.length - 1; row >= 0; ) {
+    for (let row = playfield.length - 1; row >= 0; ) {
     if (playfield[row].every(cell => !!cell)) {
       // 현재 행이 모두 채워져 있는지 확인
       for (let r = row; r >= 0; r--) {
@@ -121,19 +121,24 @@ function placeTetromino() {
 
       if (linesCleared) {
         let currentScore = parseInt(score.textContent);
-        score.textContent = currentScore + 100;
+        score.textContent = currentScore + point;
+        // 라인지울때 포인트 증가
       }
       if (linesCleared % 5 === 0) {
-        // 5번 지워질 때마다 level.textContent 값을 1씩 증가시킴
+        // 라인 5번 지울때 레벨업
+        levelUp++;
+      }
+      if (levelUp) {
         let currentLevel = parseInt(level.textContent);
         level.textContent = currentLevel + 1;
-        
         addpoint = parseInt(point);
         point = addpoint + 50; // 레벨 증가할때마다 50점 추가
-
-        speed -= 5; // 속도 5씩 증가
+      }
+      if (levelUp % 2 === 0) {
+        // 레벨 2 증가할때마다 속도 증가
+        speed -= 5;
         if (speed <= 10) {
-          speed = 10; // 10 이하로 안떨어지게
+          speed = 10;
         }
       }
     } else {
